@@ -48,9 +48,6 @@ Rectangle {
                     color: "#24c3f5"
                     radius: 5
                 }
-                onClicked: {
-                    console.log(scroll.height)
-                }
             }
         }
         ToolSeparator {

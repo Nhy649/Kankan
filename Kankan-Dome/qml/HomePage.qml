@@ -41,8 +41,6 @@ Item {
                 Layout.preferredWidth: 40
                 Layout.leftMargin: 10
                 radius: width/2
-                border.width: 1
-                border.color: "#707070"
                 Image {
                     id: image
                     smooth: true

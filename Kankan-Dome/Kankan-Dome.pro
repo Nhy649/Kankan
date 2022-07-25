@@ -19,7 +19,10 @@ resources.files = qml/main.qml\
     qml/RegisterPage.qml\
     qml/WatchVideo.qml\
     qml/FullScreen.qml\
-    qml/QmlBusyIndicator.qml
+    qml/QmlBusyIndicator.qml\
+    qml/ChangePassword.qml\
+    qml/ChangeNickname.qml\
+    qml/Dialogs.qml
 
 resources.prefix = /$${TARGET}
 RESOURCES += resources \
@@ -38,6 +41,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     qml/AccountInformation.qml \
+    qml/ChangeNickname.qml \
+    qml/ChangePassword.qml \
     qml/CommentManger.qml \
     qml/Dialogs.qml \
     qml/EditManuscript.qml \

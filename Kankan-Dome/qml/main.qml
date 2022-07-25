@@ -30,17 +30,27 @@ ApplicationWindow {
         visible: false
         anchors.fill: parent
     }
-//    WatchVideo {
-//        id: watchVideo
-//        visible: false
-//        anchors.fill: parent
-//    }
-
     SettingPage {
         id: settingPage
         visible: false
         anchors.fill: parent
     }
+    AccountInformation {
+        id: accountInfor
+        visible: false
+        anchors.fill: parent
+    }
+    ChangePassword {
+        id: changePassword
+        visible: false
+        anchors.fill: parent
+    }
+    ChangeNickname{
+        id: changeNickname
+        visible: false
+        anchors.fill: parent
+    }
+
     MyFriend {
         id: myFriend
         anchors.fill: parent
@@ -67,5 +77,8 @@ ApplicationWindow {
             width: stackView.width
             height: stackView.height
         }
+    }
+    Dialogs {
+        id: dialogs
     }
 }

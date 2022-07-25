@@ -42,12 +42,12 @@ Rectangle {
             ColumnLayout {
                 anchors.fill: parent
                 spacing: 0
-                Rectangle{
+                Button{
                     Layout.preferredWidth: parent.width-20
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "帐号资料"
+                        text: qsTr("帐号资料")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -58,10 +58,12 @@ Rectangle {
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
                     }
-                    TapHandler {
-                        onTapped: {
-                            accountInfor.visible = true
-                        }
+                    background: Rectangle {
+                        color: "white"
+                    }
+
+                    onClicked: {
+                        accountInfor.visible = true
                     }
                 }
                 ToolSeparator {
@@ -73,12 +75,12 @@ Rectangle {
                         color: "#cccccc"
                     }
                 }
-                Rectangle{
+                Button{
                     Layout.preferredWidth: parent.width-20
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "安全隐私"
+                        text: qsTr("修改密码")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -88,6 +90,12 @@ Rectangle {
                         sourceSize: Qt.size(28, 28)
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
+                    }
+                    background: Rectangle {
+                        color: "white"
+                    }
+                    onClicked: {
+                        changePassword.visible = true
                     }
                 }
                 ToolSeparator {
@@ -99,12 +107,12 @@ Rectangle {
                         color: "#cccccc"
                     }
                 }
-                Rectangle{
+                Button{
                     Layout.preferredWidth: parent.width-20
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "播放设置"
+                        text: qsTr("播放设置")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -114,6 +122,9 @@ Rectangle {
                         sourceSize: Qt.size(28, 28)
                         anchors.right: parent.right
                         anchors.verticalCenter: parent.verticalCenter
+                    }
+                    background: Rectangle {
+                        color: "white"
                     }
                 }
             }
@@ -129,7 +140,7 @@ Rectangle {
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "开屏画面设置"
+                        text: qsTr("开屏画面设置")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -155,7 +166,7 @@ Rectangle {
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "离线设置"
+                        text: qsTr("离线设置")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -181,7 +192,7 @@ Rectangle {
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "消息设置"
+                        text: qsTr("消息设置")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -207,7 +218,7 @@ Rectangle {
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "下载管理"
+                        text: qsTr("下载管理")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -233,7 +244,7 @@ Rectangle {
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "清理存储空间"
+                        text: qsTr("清理存储空间")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -259,7 +270,7 @@ Rectangle {
                     Layout.preferredHeight: 40
                     Layout.alignment: Qt.AlignHCenter
                     Text {
-                        text: "其他设置"
+                        text: qsTr("其他设置")
                         font.pixelSize: 14
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
@@ -286,11 +297,6 @@ Rectangle {
         onClicked: {
             exitDialog.visible = true
         }
-    }
-    AccountInformation {
-        id: accountInfor
-        visible: false
-        anchors.fill: parent
     }
     Button {
         id: exitDialog
